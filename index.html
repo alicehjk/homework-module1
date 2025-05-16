@@ -1,22 +1,75 @@
+<!-- TODO
+ https://gap.westcliff.edu/pluginfile.php?file=%2F1838715%2Fmod_resource%2Fcontent%2F6%2FModule1_week2_day1_Homework.pdf
+ 
+ page 13 pdf.
+ continue-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Great Cliffs</title>
+    <style>
+        /* Header */
+        header {
+            width: 100%;
+            min-height: 400px;
+            padding-top: 3em;
+        }
+        #home header {
+            background: no-repeat lightgrey url(images/cliff_ocean.jpg);
+            background-size: 1500px;
+        }
+        .main-header {
+            background-color: rgb(255,255,255,0.8);
+            width: 701px;
+            margin: 2em auto 0 auto;
+            min-height: 100px;
+            height: 100px;
+        }
+        .main-header .logo img {
+            width: 100px;
+            height: 100px;
+            margin: 0 2em 0 0;
+            float: left;
+        }
+        /* Navigation */
+        .main-menu {
+            margin-left: 227px;
+            font-weight: 400;
+        }
+        .main-menu ul li {
+            list-style-type: none;
+            display: inline-block;
+            float: left;
+            padding-left: 25px;
+            padding-right: 25px;
+            border-left: 1px solid rgba(202, 204, 202, 0.6);
+            line-height: 100px;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+        .main-menu ul li a {
+            text-decoration: none;
+            color: #888;
+        }
+        .main-menu ul li a:hover {
+            color: #9ed034;
+        }
+    </style>
 </head>
-<body>
+<body id="home">
     <div class="container">
         <header>
             <div class="main-header">
-                <img src="images/cliff_ocean.jpg" alt="California Cliffs" width="100%" height="auto">
                 <div class="logo">
                     <img src="images/logo.png" alt="Great Cliffs Logo" width="200" height="auto">
                 </div>
                 <nav class="main-menu">
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="activities.html">Cliffs</a></li>
+                        <li>cliffs</li>
                         <li><a href="activities.html">Activities</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
