@@ -329,3 +329,13 @@ textarea {
   padding: 0.75em 0;
   font-size: 1.1em;
 }
+
+#timeofday { 
+  width: 100vw;
+  height: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #3a3a3a;
+  background: linear-gradient(0deg, rgba(251, 215, 139, 1) 0%, rgba(118, 213, 245, 1) 100%);
+  display: table-cell;
+  vertical-align: middle;
+}

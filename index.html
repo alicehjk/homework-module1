@@ -25,6 +25,10 @@
                 </nav>
             </div>
         </header>
+        <section id="timeofday">
+          <span>Your Current Local Time: </span>
+          <span id="clock"></span>
+        </section>
 
         <main>
             <h2>Introducing California's Greatest Cliffs</h2>
@@ -74,6 +78,56 @@
                 <p>This website is designed and created solely for educational purposes only at Westcliff University. All contents are not intended for any commercial gain or use.</p>
             </div>
         </footer>
-    </div>
+        <script>
+          //Create a time data function
+          function currentTime() {
+            //Declare variables
+            var d = new Date(); //Get current date
+            var hr = d.getHours(); //Get current hours
+            var min = d.getMinutes(); //Get current minutes
+            var sec = d.getSeconds(); //Get current seconds
+            var ampm; //Declare empty variable to store AM or PM
+        
+            // Set AM or PM
+            ampm = hr >= 12 ? "AM" : "PM";
+        
+            // Convert to 12-hour format
+            hr = hr % 12;
+            hr = hr ? hr : 12;
+        
+            //Add 0 to single digits for seconds
+            if (sec < 10) {
+              sec = "0" + sec;
+            }
+        
+            //Add 0 to single digits for minutes
+            if (min < 10) {
+              min = "0" + min;
+            }
+        
+            // Time zone logic
+            var utchr = d.getUTCHours();
+            var timeDiff = d.getHours() - utchr;
+            var adjTimeDiff = (timeDiff + 24) % 24;
+            var timeZone;
+        
+            switch (adjTimeDiff) {
+              case 7: timeZone = "PT"; break;
+              case 6: timeZone = "MT"; break;
+              case 5: timeZone = "CT"; break;
+              case 4: timeZone = "ET"; break;
+              default: timeZone = "GMT";
+            }
+        
+            //Assemble time format to display
+            var time = hr + ":" + min + ":" + sec + " " + ampm + " " + timeZone;
+        
+            //Display current local time and time zone on HTML elements
+            document.getElementById("clock").innerText = time;
+          }
+        
+          setInterval(currentTime, 1000); //Update time every second
+        </script>
+      </div>
 </body>
 </html>
