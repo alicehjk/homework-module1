@@ -89,26 +89,22 @@
             var ampm; //Declare empty variable to store AM or PM
         
             // Set AM or PM
-            ampm = hr >= 12 ? "AM" : "PM";
+            ampm = hr >= 12 ? "PM" : "AM";
         
             // Convert to 12-hour format
             hr = hr % 12;
             hr = hr ? hr : 12;
         
             //Add 0 to single digits for seconds
-            if (sec < 10) {
-              sec = "0" + sec;
-            }
+            sec = sec < 10 ? "0" + sec : sec;
         
             //Add 0 to single digits for minutes
-            if (min < 10) {
-              min = "0" + min;
-            }
+            min = min < 10 ? "0" + min : min;
         
             // Time zone logic
             var utchr = d.getUTCHours();
             var timeDiff = d.getHours() - utchr;
-            var adjTimeDiff = (timeDiff + 24) % 24;
+            var adjTimeDiff = (timeDiff + 24) % 24; //Convert negative to positive if needed
             var timeZone;
         
             switch (adjTimeDiff) {
