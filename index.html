@@ -41,7 +41,7 @@
 
         <section>
             <ul id="partners">
-              <li class="partner">
+              <!-- <li class="partner">
                 <img src="images/partners/partner-bustour.png" alt="Partner Bus Tours">
               </li>
               <li class="partner">
@@ -58,7 +58,7 @@
               </li>
               <li class="partner">
                 <img src="images/partners/partner-tourgroup.png" alt="Partner Tour Group">
-              </li>
+              </li> -->
             </ul>
         </section>
           
@@ -123,6 +123,33 @@
           }
         
           setInterval(currentTime, 1000); //Update time every second
+
+          // Array of partner image paths as strings
+            var partners = [
+                "images/partners/partner-bustour.png",
+              "images/partners/partner-cabinrental.png",
+              "images/partners/partner-campingadv.png",
+              "images/partners/partner-collegetours.png",
+              "images/partners/partner-rentalbike.png",
+              "images/partners/partner-tourgroup.png"
+            ];
+
+            // Get the partners <ul> element
+            var partnerList = document.getElementById("partners");
+
+            // Populate the list
+            for (var i = 0; i < partners.length; i++) {
+              var li = document.createElement("li");
+              li.className = "partner";
+
+              var img = document.createElement("img");
+              img.src = partners[i];
+              img.alt = "Partner Logo " + (i + 1); // Basic alt text
+
+              li.appendChild(img);
+              partnerList.appendChild(li);
+            }
+        </script>
         </script>
       </div>
 </body>
