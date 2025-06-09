@@ -339,3 +339,7 @@ textarea {
   display: table-cell;
   vertical-align: middle;
 }
+
+td.selected {
+  background-color: #ffeb99;
+}
