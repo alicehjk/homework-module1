@@ -343,3 +343,22 @@ textarea {
 td.selected {
   background-color: #ffeb99;
 }
+
+#selected-activities {
+  width: 1000px;
+  margin: 2em auto;
+  padding: 1em;
+  background-color: #f0f0f0;
+  border: 2px solid #852B1B;
+  border-radius: 8px;
+}
+
+#selected-activities h3 {
+  margin-top: 0;
+  color: #852B1B;
+}
+
+#selected-activities ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
