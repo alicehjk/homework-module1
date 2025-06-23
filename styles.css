@@ -357,7 +357,38 @@ td.selected {
   color: #852B1B;
 }
 
-#selected-activities ul {
-  list-style-type: disc;
+#activity-list {
+  display: block !important;
   padding-left: 20px;
+}
+
+.modal {
+  color:#3a3a3a;
+}
+
+#activity-list {
+  display: block !important;
+  padding-left: 20px;
+  color: #212529 !important;  /* Ensure text is visible */
+}
+
+.modal-body {
+  background-color: #fff !important;
+  color: #212529 !important;
+}
+
+#activity-list {
+  display: block !important;
+  padding-left: 20px;
+  color: #212529 !important;
+}
+
+.modal-body {
+  background-color: #fff !important;
+  color: #212529 !important;
+}
+
+#activity-list .list-group-item {
+  font-size: 1em;
+  padding: 0.75em 1em;
 }
