@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,27 +31,70 @@
         </nav>
 
         <main class="container my-5">
-            <h1>Recreational Activities</h1>
-            <p>Each of the four cliffs in southern California offers its own unique recreational opportunities. You will enjoy the following outdoor activities that are available to each of the cliffs:</p>
-            <ul>
-                <li>Camping</li>
-                <li>Hiking</li>
-                <li>Fishing</li>
-                <li>Swimming</li>
-                <li>Rock Climbing</li>
-                <li>Biking</li>
-                <li>Picnicking</li>
-                <li>Bird Watching</li>
-                <li>Horseback Riding</li>
-                <li>Wildlife Photography</li>
-            </ul>
+            <h1>Activities</h1>
+            <p>There are many planned activities at all the cliff sites. Some are scheduled daily, weekly, monthly, and yearly. These activities are not however run by the state park and recreational department. They are operated and managed by private vendors but are partners with the state department. Therefore, for schedule inquiries or information, please contact them directly. For a list of activities, please refer to the table below:</p>
+
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped">
+                    <caption class="text-center font-weight-bold">Activities at the Cliffs</caption>
+                    <thead class="thead-light">
+                        <tr>
+                            <th>Activity</th>
+                            <th>West Cliff</th>
+                            <th>North Cliff</th>
+                            <th>East Cliff</th>
+                            <th>South Cliff</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Hiking</td>
+                            <td>College Hikes</td>
+                            <td>Family Fun</td>
+                            <td>Treasure Trails</td>
+                            <td>Canyon Explorer</td>
+                        </tr>
+                        <tr>
+                            <td>Kayak</td>
+                            <td>Western Kayak Meetup</td>
+                            <td>Not Available</td>
+                            <td>Youth Kayaking</td>
+                            <td>Kayak Down</td>
+                        </tr>
+                        <tr>
+                            <td>Skydiving</td>
+                            <td>Seacliff Diving</td>
+                            <td>Sky is the limit</td>
+                            <td>Not Available</td>
+                            <td>Sky Diving for Beginners</td>
+                        </tr>
+                        <tr>
+                            <td>Biking</td>
+                            <td>Bicycle for One</td>
+                            <td>Not Available</td>
+                            <td>Bike Meetup Group</td>
+                            <td>Sunset Camping</td>
+                        </tr>
+                        <tr>
+                            <td>Camping</td>
+                            <td>Youth Camp</td>
+                            <td>Rent a Tent</td>
+                            <td>Campground Adventure</td>
+                            <td>Not Available</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="selected-activities" style="display:none;">
+                <h3>Selected Activities</h3>
+                <ul id="activity-list"></ul>
+            </div>
         </main>
 
         <section class="bg-primary text-center py-4">
             <div class="container">
-                <div class="row" id="partners">
-                    <!-- Partner logos populated by JS -->
-                </div>
+                <div class="row" id="partners"></div>
             </div>
         </section>
 
@@ -68,11 +112,12 @@
             </div>
         </footer>
 
-        <!-- Bootstrap JS -->
+        <!-- Scripts -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="js/activity.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 
         <script>
-            // Populate partners
             var partners = [
                 "images/partners/partner-bustour.png",
                 "images/partners/partner-cabinrental.png",
@@ -82,7 +127,7 @@
                 "images/partners/partner-tourgroup.png"
             ];
             var partnerList = document.getElementById("partners");
-            for (var i = 0; i < partners.length; i++) {
+            for (var i = 0; i < partners.length; i++) {{
                 var div = document.createElement("div");
                 div.className = "col-6 col-sm-6 col-md-4 col-lg-2 mb-3";
                 var img = document.createElement("img");
@@ -91,7 +136,7 @@
                 img.className = "img-fluid rounded-circle";
                 div.appendChild(img);
                 partnerList.appendChild(div);
-            }
+            }}
         </script>
     </div>
 </body>
